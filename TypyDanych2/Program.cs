@@ -34,7 +34,7 @@ double Odleglosc(int aX, int aY, int bX, int bY)
     double dlugosc = Math.Sqrt((aX - bX) * (aX - bX) + (aY - bY) * (aY - bY));
     return dlugosc;
 }
-Odleglosc(2,3,4,5);
+Odleglosc(2, 3, 4, 5);
 
 System.Console.WriteLine();
 System.Console.WriteLine();
@@ -91,18 +91,24 @@ System.Console.WriteLine("------------------------------------------------------
 System.Console.WriteLine("Zadanie 2.5");
 
 // 5.Wyświetl dla podanych dwóch liczb całkowitych ich największy wspólny dzielnik.
+// Algorytm Euklidesa
 
-    double a = 13;
-	double b = 2;
-	double w;
-  
-	while (b != 0) {
-		w = a % b;
-		a = b;
-		b = w;
-	}
-  
-	Console.WriteLine("NWD wynosi: {0}",a);
+int x = 504;
+int y = 315;
+int nw;
+int nd;
+
+while (x != y)
+{
+    if (x > y)
+        x = x - y;
+    else
+        y = y - x;
+}
+
+nd = x;
+
+System.Console.WriteLine(nd);
 
 System.Console.WriteLine();
 System.Console.WriteLine();
@@ -111,19 +117,9 @@ System.Console.WriteLine("Zadanie 2.6");
 
 // 6.Wyświetl dla podanych dwóch liczb całkowitych ich największą wspólną wielokrotność.
 
-    double a = 10;
-	double b = 20;
-	double x = a * b;
-	double w;
+nw = Math.Abs(x * y) / nd;
 
-	while (b != 0 && a!=0) {
-		w = a % b;
-		a = b;
-		b = w;
-	}
-
-	double nww = x / a;
-	Console.WriteLine("NWW wynosi: {0}", nww);
+System.Console.WriteLine(nw);
 
 System.Console.WriteLine();
 System.Console.WriteLine();
@@ -132,10 +128,14 @@ System.Console.WriteLine("Zadanie 2.7");
 
 // 7.Wyświetl pole prostokąta dla podanej liczby całkowitej.
 
+void PoleProstokata()
+{
 int podstawa = 2;
 int h = 5;
-int pole = podstawa*h;
-System.Console.WriteLine($@"Pole prostokąta o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+int pole = podstawa * h;
+System.Console.WriteLine(
+    $@"Pole prostokąta o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+}
 
 System.Console.WriteLine();
 System.Console.WriteLine();
@@ -144,30 +144,44 @@ System.Console.WriteLine("Zadanie 2.8");
 
 // 8.Wyświetl pole trójkąta dla podanej podstawy i wysokości.
 
+ int PoleTrojkata();
+{
 int podstawa = 2;
 int h = 5;
-int pole = podstawa*h/2;
-System.Console.WriteLine($@"Pole trójkąta o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+int pole = podstawa * h / 2;
+System.Console.WriteLine(
+    $@"Pole trójkąta o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+    return pole;
+}
 
 System.Console.WriteLine();
 System.Console.WriteLine();
 System.Console.WriteLine("---------------------------------------------------------------------");
 System.Console.WriteLine("Zadanie 2.9");
+
 // 9.Wyświetl pole równoległoboku dla podanej podstawy i wysokości
 
+void PoleRownolegloboku();
+{
 int podstawa = 2;
 int h = 5;
-int pole = podstawa*h;
-System.Console.WriteLine($@"Pole równoległoboku o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+int pole = podstawa * h;
+System.Console.WriteLine(
+    $@"Pole równoległoboku o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+}
 
 System.Console.WriteLine();
 System.Console.WriteLine();
 System.Console.WriteLine("---------------------------------------------------------------------");
 System.Console.WriteLine("Zadanie 2.9");
+
 // 10.Wyświetl pole trapezu dla podanej wysokości oraz dwóch podstaw.
 
+void PoleTrapezu()
+{
 int podstawa = 2;
 int podstawaB = 3;
 int h = 5;
-int pole = (podstawa+podstawaB)*h/2;
+int pole = (podstawa + podstawaB) * h / 2;
 System.Console.WriteLine($@"Pole trapezu o podstawie {podstawa} oraz wysokości {h} wynosi: {pole}");
+}
