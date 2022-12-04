@@ -145,19 +145,24 @@ void Zadanie7()
     System.Console.WriteLine();
     System.Console.WriteLine("Zadanie 1.7");
     int max = 100;
-    
-    for(int i = 1; i <= max; i++){
-        if(Dzielniki(i) == 2) {
+
+    for (int i = 1; i <= max; i++)
+    {
+        if (Dzielniki(i) == 2)
+        {
             System.Console.WriteLine(i);
         }
     }
 }
 
-int Dzielniki(int num) {
+int Dzielniki(int num)
+{
     int liczbaDzielnikow = 0;
     int dzielnik = num;
-    while(dzielnik > 0) {
-        if(num % dzielnik == 0) {
+    while (dzielnik > 0)
+    {
+        if (num % dzielnik == 0)
+        {
             liczbaDzielnikow++;
         }
 
@@ -214,7 +219,10 @@ void Zadanie8()
     Console.WriteLine($"double od {double.MinValue} do {double.MaxValue} rozmiar 8 bit");
 
     //decimal
-    Console.WriteLine($"decimal od {decimal.MinValue} do {decimal.MaxValue} rozmiar 8 bit");
+    Console.WriteLine($"decimal od {decimal.MinValue} do {decimal.MaxValue} rozmiar 16 bit");
+    Console.WriteLine(
+        $"decimal od {decimal.MinValue} do {decimal.MaxValue} rozmiar {sizeof(decimal)} bit"
+    );
 }
 
 Zadanie1();
